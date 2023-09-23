@@ -1,0 +1,1205 @@
+{
+	"info": {
+		"_postman_id": "917faaab-e42e-4f19-bc5e-42820f0fe04f",
+		"name": "Smart Communication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin\",\n    \"password\": \"admin\"\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/Login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile Information",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetProfileInformation",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetProfileInformation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Data Center",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"group_name\": \"xyzz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/AddDataCenter",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"AddDataCenter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Data Center",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"2\",\n    \"group_name\": \"xyzz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/UpdateDataCenter",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"UpdateDataCenter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Data Center",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/RemoveDataCenter",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"RemoveDataCenter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data Centers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetDataCenters",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetDataCenters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data Center",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"search_field\": \"id\",\n    \"search_value\": \"2\",\n    \"condition\": \"equal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetDataCenter",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetDataCenter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"data_center_id\": \"2\",\n    \"destination\": \"abc\",\n    \"socket\": \"udp:192.168.1.100:5077\",\n    \"state\": \"1\",\n    \"probe_mode\": \"123\",\n    \"weight\": \"12\",\n    \"priority\": \"1\",\n    \"attrs\": \"1\",\n    \"description\": \"abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/AddGateway",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"AddGateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"4\",\n    \"data_center_id\": \"2\",\n    \"destination\": \"abc\",\n    \"socket\": \"udp:192.168.1.100:5077\",\n    \"state\": \"1\",\n    \"probe_mode\": \"123\",\n    \"weight\": \"12\",\n    \"priority\": \"1\",\n    \"attrs\": \"1\",\n    \"description\": \"abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/UpdateGateway",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"UpdateGateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/RemoveGateway",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"RemoveGateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disable Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/DisableGateway",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"DisableGateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enable Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/EnableGateway",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"EnableGateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Gateways",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetGateways",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetGateways"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"search_field\": \"id\",\n    \"search_value\": \"3\",\n    \"condition\": \"equal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetGateway",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetGateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"name\": \"abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/AddLocation",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"AddLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"3\",\n    \"name\": \"aaa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/UpdateLocation",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"UpdateLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/RemoveLocation",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"RemoveLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Locations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetLocations",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetLocations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"search_field\": \"id\",\n    \"search_value\": \"3\",\n    \"condition\": \"equal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetLocation",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Location Ip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"location_id\": \"2\",\n    \"ip\": \"192.168.1.100\",\n    \"mask\": \"udp:192.168.1.100:5077\",\n    \"port\": \"5077\",\n    \"proto\": \"udp\",\n    \"pattern\": \"12\",\n    \"context_info\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/AddLocationIp",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"AddLocationIp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Location Ip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"4\",\n    \"location_id\": \"4\",\n    \"ip\": \"192.168.1.100\",\n    \"mask\": \"udp:192.168.1.100:5077\",\n    \"port\": \"5077\",\n    \"proto\": \"udp\",\n    \"pattern\": \"12\",\n    \"context_info\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/UpdateLocationIp",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"UpdateLocationIp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Location Ip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/RemoveLocationIp",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"RemoveLocationIp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Location Ips",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetLocationIps",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetLocationIps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Location Ip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"search_field\": \"id\",\n    \"search_value\": \"1\",\n    \"condition\": \"equal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetLocationIp",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetLocationIp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Location Ani",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"location_id\": \"2\",\n    \"ani_prefix\": \"abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/AddLocationAni",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"AddLocationAni"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Location Ani",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"4\",\n    \"location_id\": \"4\",\n    \"ani_prefix\": \"192.168.1.100\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/UpdateLocationAni",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"UpdateLocationAni"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Location Ani",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/RemoveLocationAni",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"RemoveLocationAni"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Location Anis",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetLocationAnis",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetLocationAnis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Location Ani",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"search_field\": \"id\",\n    \"search_value\": \"3\",\n    \"condition\": \"equal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetLocationAnis",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetLocationAnis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"location_id\": \"1\",\n    \"data_center_id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/AddRoute",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"AddRoute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"4\",\n    \"location_id\": \"2\",\n    \"data_center_id\": \"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/UpdateRoute",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"UpdateRoute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/RemoveRoute",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"RemoveRoute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Routes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetRoutes",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetRoutes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Routes by Location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"search_field\": \"location_id\",\n    \"search_value\": \"1\",\n    \"condition\": \"equal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetRoutesByLocation",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetRoutesByLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Carrier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"name\": \"abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/AddCarrier",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"AddCarrier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Carrier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"2\",\n    \"name\": \"xyz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/UpdateCarrier",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"UpdateCarrier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Carrier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/RemoveCarrier",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"RemoveCarrier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disable Carrier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/DisableCarrier",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"DisableCarrier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enable Carrier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/EnableCarrier",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"EnableCarrier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Carriers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetCarriers",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetCarriers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Carrier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"search_field\": \"id\",\n    \"search_value\": \"2\",\n    \"condition\": \"equal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetCarrier",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetCarrier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Carrier Ip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"carrier_id\": \"1\",\n    \"description\": \"abc\",\n    \"carrier_gateway_ip\": \"192.168.1.100\",\n    \"port\": \"5077\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/AddCarrierIp",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"AddCarrierIp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Carrier Ip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"4\",\n    \"carrier_id\": \"4\",\n    \"description\": \"abc\",\n    \"carrier_gateway_ip\": \"192.168.1.101\",\n    \"port\": \"5077\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/UpdateCarrierIp",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"UpdateCarrierIp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Carrier Ip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/RemoveCarrierIp",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"RemoveCarrierIp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Carrier Ips",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetCarrierIps",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetCarrierIps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Carrier Ip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"search_field\": \"id\",\n    \"search_value\": \"1\",\n    \"condition\": \"equal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/GetCarrierIp",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"GetCarrierIp"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
