@@ -1539,6 +1539,7 @@ func AddLocationAni(RequestJSON map[string]interface{}, ResponseJSON map[string]
 		return
 	} else {
 		params := make([]interface{}, 1)
+		params[0] = aniPrefix
 		_, ok := GetSingleRow("SELECT `ani_prefix` FROM `location_anis` WHERE `ani_prefix`= ?", params, "default")
 		if ok {
 			ResponseJSON["status"] = 400
