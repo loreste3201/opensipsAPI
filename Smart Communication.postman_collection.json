@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "917faaab-e42e-4f19-bc5e-42820f0fe04f",
+		"_postman_id": "2c968a7b-833a-4988-b56a-ca7eea76369b",
 		"name": "Smart Communication",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "228831"
 	},
 	"item": [
 		{
@@ -194,7 +195,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"data_center_id\": \"2\",\n    \"destination\": \"abc\",\n    \"socket\": \"udp:192.168.1.100:5077\",\n    \"state\": \"1\",\n    \"probe_mode\": \"123\",\n    \"weight\": \"12\",\n    \"priority\": \"1\",\n    \"attrs\": \"1\",\n    \"description\": \"abc\"\n}",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"data_center_id\": \"2\",\n    \"destination\": \"abc\",\n    \"state\": \"1\",\n    \"probe_mode\": \"123\",\n    \"weight\": \"12\",\n    \"priority\": \"1\",\n    \"attrs\": \"1\",\n    \"description\": \"abc\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -220,7 +221,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"4\",\n    \"data_center_id\": \"2\",\n    \"destination\": \"abc\",\n    \"socket\": \"udp:192.168.1.100:5077\",\n    \"state\": \"1\",\n    \"probe_mode\": \"123\",\n    \"weight\": \"12\",\n    \"priority\": \"1\",\n    \"attrs\": \"1\",\n    \"description\": \"abc\"\n}",
+					"raw": "{\n    \"auth_token\": \"{{Auth_Token}}\",\n    \"id\": \"4\",\n    \"data_center_id\": \"2\",\n    \"destination\": \"abc\",\n    \"state\": \"1\",\n    \"probe_mode\": \"123\",\n    \"weight\": \"12\",\n    \"priority\": \"1\",\n    \"attrs\": \"1\",\n    \"description\": \"abc\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1200,6 +1201,37 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://54.152.27.169:8080/API/v0"
+		},
+		{
+			"key": "Auth_Token",
+			"value": "f777272e76fb853805a54b31c615c02b",
+			"type": "string"
 		}
 	]
 }
